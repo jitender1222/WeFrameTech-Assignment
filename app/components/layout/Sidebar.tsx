@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { X, ChevronDown } from "lucide-react";
+import { X, ChevronDown, Menu } from "lucide-react";
 import Image from "next/image";
 
 export default function Sidebar() {
@@ -9,6 +9,15 @@ export default function Sidebar() {
 
   return (
     <>
+      {/* Mobile Hamburger Button */}
+      <button
+        className="md:hidden p-3 fixed top-4 left-4 z-50 bg-[#0B4661] text-white rounded-lg shadow"
+        onClick={() => setSidebarOpen(true)}
+        aria-label="Open sidebar"
+      >
+        <Menu className="h-6 w-6" />
+      </button>
+
       <aside
         className={`border-2 flex flex-col justify-between fixed md:static md:translate-x-0 inset-y-0 left-0 z-40 
         w-64 bg-gradient-to-b from-[#0B4661] to-[#0E6A7D]
