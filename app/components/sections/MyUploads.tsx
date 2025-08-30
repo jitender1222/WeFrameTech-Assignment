@@ -95,9 +95,12 @@ export default function MyUploads() {
 
                   {/* Stage Dropdown */}
                   <Td>
-                    <select className="rounded-md border border-slate-200 bg-white px-3 py-1.5 text-[13px]">
+                    <select
+                      defaultValue={r.stage}
+                      className="rounded-md border border-slate-200 bg-white px-3 py-1.5 text-[13px]"
+                    >
                       {stages.map((s) => (
-                        <option key={s} defaultValue={s === r.stage} value={s}>
+                        <option key={s} value={s}>
                           {s}
                         </option>
                       ))}
